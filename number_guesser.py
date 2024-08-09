@@ -24,9 +24,12 @@ while True:
         print('Please type a number next time.')
         continue
 
-    if top_of_range <= 0:
-        print('Please type a number larger than 0 next time.')
-        quit()
-else:
-    print('Please type a number next time.')
-    quit()
+    if user_guess == random_number:
+        print('You got it!')
+        break
+    elif user_guess > random_number:
+        print('You were above the number!')
+    else:
+        print('You were below the number!')
+
+print('You got it in', guesses, 'guesses')
